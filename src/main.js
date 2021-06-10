@@ -8,8 +8,8 @@ function showNotification () {
     body: 'Here are the updates'
   })
   console.log('notification', notification)
-  notification.onclick = (e)=> {
-    window.location.href = "http://google.com"
+  notification.onclick = (e) => {
+    window.location.href = 'http://google.com'
   }
   alert(notification.title)
 }
