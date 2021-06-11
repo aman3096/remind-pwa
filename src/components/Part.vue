@@ -107,7 +107,7 @@
                 time: _time
               })
             const notification = new Notification(this.tasks[this.tasks.length-1].action +' is pending.', {
-              body: 'Here are the updates',
+              body: this.tasks[this.tasks.length-1].description,
               image: '/src/assets/reminder.jpeg',
               vibrate: [500, 110, 500]
             })
@@ -207,6 +207,9 @@
 }
 #when {
   padding: 1rem;
+}
+@media only screen and (max-width:768px){
+  width: 100%;
 }
 
 </style>
