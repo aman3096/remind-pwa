@@ -5,19 +5,18 @@ Vue.config.productionTip = false
 
 function showNotification () {
   const notification = new Notification('Welcome to the reminder application in function', {
-    body: 'Here are the updates'
+    body: 'Here are the updates',
+    image: '/src/assets/reminder.jpeg',
+    vibrate: [500, 110, 500]
   })
-  console.log('notification', notification)
   notification.onclick = (e) => {
     window.location.href = 'http://google.com'
   }
-  alert(notification.title)
 }
 
 function displayNotification () {
   if (Notification.permission === 'granted') {
     showNotification()
-    alert('Welcome to the reminder application')
   } else if (Notification.permission !== 'denied') {
     Notification.requestPermission(() => {
       showNotification()
