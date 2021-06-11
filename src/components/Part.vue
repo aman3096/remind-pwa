@@ -106,8 +106,8 @@
                 description: this.description,
                 time: _time
               })
-            const notification = new Notification(this.tasks[this.tasks.length-1].action +' is pending.', {
-              body: this.tasks[this.tasks.length-1].description,
+            const notification = new Notification(this.tasks[this.tasks.length-1].action +' is pending. Due at', {
+              body: this.tasks[this.tasks.length-1].time + '(24h)',
               image: '/src/assets/reminder.jpeg',
               vibrate: [500, 110, 500]
             })
